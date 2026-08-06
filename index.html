@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karla Castro | Software & Data Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Efectos de luz de fondo sutiles -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <div class="logo">KC<span>.</span></div>
+        <div class="nav-right-container">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-sun" id="theme-icon"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- INICIO: HERO SECTION (AHORA FUNCIONA COMO SOBRE MÍ) -->
+    <header id="inicio" class="hero-section">
+        <div class="hero-left hidden">
+            <h1 class="hero-title">¡Hola, soy <span class="accent-text">Karla Castro</span>!</h1>
+            <h2 class="hero-dynamic-text">
+                Soy <span id="typed-text" class="accent-text"></span><span class="cursor">|</span>
+            </h2>
+            
+            <p class="hero-description">
+                Ingeniera en Informática egresada de INACAP tengo experiencia en desarrollo web Full Stack me interesan el desarrollo Back End, la administración de bases de datos, el análisis de datos y la Inteligencia Artificial. Actualmente me encuentro en búsqueda de oportunidades laborales donde pueda aplicar mis conocimientos y seguir creciendo profesionalmente.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="Karla-Castro-CV.pdf" download="Karla_Castro_CV.pdf" class="btn"><i class="fas fa-file-download"></i> Descargar CV</a>
+                <a href="#contacto" class="btn"><i class="fas fa-envelope"></i> Contáctame</a>
+            </div>
+        </div>
+
+        <div class="hero-right hidden">
+            <div class="hero-image-wrapper">
+                <div class="profile-glow-circle"></div>
+                <img src="foto-karla.png" alt="Karla Castro" class="hero-profile-img" onerror="this.src='https://via.placeholder.com/350x350/1e293b/3b82f6?text=Karla+Castro'">
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE TECNOLOGÍAS -->
+    <section id="tecnologias" class="section-compact hidden">
+        <div class="section-header text-center">
+            <h2>Tecnologías y Herramientas</h2>
+            <p>Stack tecnológico utilizado para transformar datos en soluciones robustas.</p>
+        </div>
+
+        <div class="tech-grid mt-4">
+            <div class="tech-card hidden stagger-1">
+                <div class="tech-icon"><i class="fas fa-server"></i></div>
+                <h3>Backend & Bases de Datos</h3>
+                <div class="tech-pill-group">
+                    <span class="tag-white">SQL</span><span class="tag-white">Oracle DB</span><span class="tag-white">Python</span><span class="tag-white">NodeJS</span><span class="tag-white">BigQuery</span><span class="tag-white">MariaDB</span>
+                </div>
+            </div>
+
+            <div class="tech-card hidden stagger-2">
+                <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                <h3>IA & Analytics</h3>
+                <div class="tech-pill-group">
+                    <span class="tag-white">YOLO / IA</span><span class="tag-white">OpenCV</span><span class="tag-white">Looker Studio</span><span class="tag-white">Power BI</span>
+                </div>
+            </div>
+
+            <div class="tech-card hidden stagger-3">
+                <div class="tech-icon"><i class="fas fa-code"></i></div>
+                <h3>Frontend & Móvil</h3>
+                <div class="tech-pill-group">
+                    <span class="tag-white">HTML5/CSS3</span><span class="tag-white">JavaScript</span><span class="tag-white">ReactJS</span><span class="tag-white">Flutter</span><span class="tag-white">Dart</span>
+                </div>
+            </div>
+
+            <div class="tech-card hidden stagger-4">
+                <div class="tech-icon"><i class="fas fa-tools"></i></div>
+                <h3>Herramientas & API</h3>
+                <div class="tech-pill-group">
+                    <span class="tag-white">APIs REST</span><span class="tag-white">GitHub</span><span class="tag-white">Postman</span><span class="tag-white">Scrum</span><span class="tag-white">Firebase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PROYECTOS -->
+    <section id="proyectos" class="section-compact">
+        <div class="section-header text-center hidden">
+            <h2>Proyectos Destacados</h2>
+            <p>Experiencia profesional y desarrollos tecnológicos recientes.</p>
+        </div>
+        
+        <div class="projects-list mt-4">
+            <!-- Proyecto 1 -->
+            <div class="project-row hidden">
+                <div class="project-visual">
+                    <img src="dashboard-rojos.png" alt="Dashboard Analítico CIC" class="project-img" onclick="openLightbox('dashboard-rojos.png', 'Dashboard Analítico - CIC')">
+                </div>
+                <div class="project-info">
+                    <h3>Dashboard Analítico</h3>
+                    <p class="project-description-text">Impulsé la automatización TI creando pipelines de datos en BigQuery y Oracle OIC. Sincronicé sistemas en tiempo real mediante Node.js y APIs REST (eliminando procesos manuales) y construí dashboards en Looker Studio para visibilizar KPIs.</p>
+                    <div class="project-tags">
+                        <span class="tag-white">Python</span><span class="tag-white">BigQuery</span><span class="tag-white">Looker Studio</span><span class="tag-white">Looker</span><span class="tag-white">SQL</span>
+                    </div>
+                    <a href="#" onclick="openLightbox('dashboard-rojos.png', 'Dashboard Analítico'); return false;" class="project-link">Ver Dashboard <i class="fas fa-search-plus"></i></a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-row hidden">
+                <div class="project-visual">
+                    <img src="imagen-clinica.png" alt="Sistema Clínico" class="project-img" onclick="openLightbox('imagen-clinica.png', 'Sistema de Gestión Clínica (CMS)')">
+                </div>
+                <div class="project-info">
+                    <h3>Sistema de Gestión Clínica (CMS)</h3>
+                    <p class="project-description-text">Desarrollo de un Sistema de Gestión Clínica (CMS) modular con Joomla y MariaDB. Implementación de infraestructura segura con estricto cumplimiento normativo, e integración de Machine Learning vía APIs para optimizar la administración de pacientes.</p>
+                    <div class="project-tags">
+                        <span class="tag-white">MariaDB</span><span class="tag-white">Joomla</span><span class="tag-white">Xampp</span>
+                    </div>
+                    <a href="https://suecia-cec.cl/" target="_blank" class="project-link">Ver Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="project-row hidden">
+                <div class="project-visual">
+                    <img src="image_a12d43.jpg" alt="NaviCap" class="project-img navicap-img" onclick="openGallery(['image_a12d43.jpg', 'image_a1317c.png', 'image_a13121.png', 'image_a130e3.png'], ['NaviCap Hardware', 'App Móvil', 'Inicio', 'Alertas SOS'])">
+                </div>
+                <div class="project-info">
+                    <h3>NaviCap - SafeWalk (IoT & IA)</h3>
+                    <p class="project-description-text">Solución IoT e IA para autonomía visual. Procesamiento en tiempo real (Edge Computing) usando Raspberry Pi, Python y YOLOv4. Desarrollo de aplicación móvil en Flutter con conexión Bluetooth, accesibilidad total y respaldo en la nube mediante Firebase.</p>
+                    <div class="project-tags">
+                        <span class="tag-white">Python</span><span class="tag-white">Yolo</span><span class="tag-white">OpenCV</span><span class="tag-white">Flutter</span><span class="tag-white">Firebase</span>
+                    </div>
+                    <a href="#" onclick="openGallery(['image_a12d43.jpg', 'image_a1317c.png', 'image_a13121.png', 'image_a130e3.png']); return false;" class="project-link">Ver Galería Completa <i class="fas fa-images"></i></a>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 -->
+            <div class="project-row hidden">
+                <div class="project-visual">
+                    <img src="imagen-llaves.png" alt="Copias de Llaves" class="project-img" onclick="openLightbox('imagen-llaves.png', 'S&C Copias de Llaves')">
+                </div>
+                <div class="project-info">
+                    <h3>Desarrollo Web personalizado</h3>
+                    <p class="project-description-text">Plataforma web corporativa para comercio local. Diseño de interfaz (UI/UX) y modelado de datos estructurados para optimizar la captación de clientes, logrando un despliegue seguro y mejorando la presencia digital del negocio.</p>
+                    <div class="project-tags">
+                        <span class="tag-white">Web Design</span><span class="tag-white">HTML5</span><span class="tag-white">UI/UX</span>
+                    </div>
+                    <a href="https://syccopiasdellaves.cl/" target="_blank" class="project-link">Ver Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="section-compact hidden">
+        <div class="contact-card-glass">
+            <div class="contact-header">
+                <h2>¿Lista para el siguiente desafío?</h2>
+                <p>Envíame un mensaje directo y me pondré en contacto contigo lo antes posible.</p>
+                <div class="email-badge">
+                    <i class="fas fa-envelope"></i> karlacastro1263@gmail.com
+                </div>
+            </div>
+            
+            <form action="https://formsubmit.co/karlacastro1263@gmail.com" method="POST" class="catchy-form">
+                <input type="hidden" name="_subject" value="¡Nuevo correo desde tu Portafolio!">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-row">
+                    <div class="input-catchy">
+                        <input type="text" name="name" required placeholder="Tu Nombre">
+                    </div>
+                    <div class="input-catchy">
+                        <input type="email" name="email" required placeholder="Tu Correo Electrónico">
+                    </div>
+                </div>
+                
+                <div class="input-catchy">
+                    <input type="text" name="subject" required placeholder="Asunto del Mensaje">
+                </div>
+                
+                <div class="input-catchy">
+                    <textarea name="message" rows="5" required placeholder="Escribe todos los detalles aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-submit">
+                    Enviar Mensaje <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal Lightbox / Galería -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <a class="lightbox-prev" id="lightbox-prev" onclick="changeGalleryImage(-1)">&#10094;</a>
+        <a class="lightbox-next" id="lightbox-next" onclick="changeGalleryImage(1)">&#10095;</a>
+        
+        <div class="lightbox-wrapper">
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="lightbox-caption" class="lightbox-caption-text"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-premium">
+        <div class="footer-content">
+            <div class="footer-logo">KC<span>.</span></div>
+            <p>Karla Castro © 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
