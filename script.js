@@ -19,7 +19,6 @@ themeToggleBtn.addEventListener('click', () => {
     }
 });
 
-// --- EFECTO DE ESCRITURA (TYPING EFFECT) ---
 const typedTextSpan = document.getElementById("typed-text");
 const textArray = ["Desarrolladora Full Stack", "Desarrolladora Back End", "Analista de Datos"];
 const typingDelay = 80;
@@ -135,6 +134,8 @@ function closeLightbox() {
 }
 
 function changeGalleryImage(direction) {
+    if (galleryImages.length <= 1) return;
+    
     currentIndex += direction;
     if (currentIndex >= galleryImages.length) {
         currentIndex = 0;
@@ -147,7 +148,7 @@ function changeGalleryImage(direction) {
 function updateLightboxUI() {
     lightboxImg.src = galleryImages[currentIndex];
     
-    if(galleryCaptions && galleryCaptions[currentIndex]) {
+    if(galleryCaptions && galleryCaptions.length > 0 && galleryCaptions[currentIndex]) {
         lightboxCaption.innerText = galleryCaptions[currentIndex];
     } else {
         lightboxCaption.innerText = '';
@@ -161,15 +162,16 @@ function updateLightboxUI() {
         nextBtn.style.display = 'none';
     }
 }
+
 const glowElements = document.querySelectorAll('.tech-card, .project-row, .contact-card-glass');
 
 const mobileGlowObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (window.innerWidth <= 768) {
             if (entry.isIntersecting) {
-                entry.target.classList.add('mobile-glow'); 
+                entry.target.classList.add('mobile-glow');
             } else {
-                entry.target.classList.remove('mobile-glow'); 
+                entry.target.classList.remove('mobile-glow');
             }
         }
     });
