@@ -1,4 +1,3 @@
-// --- MODO OSCURO / CLARO ---
 const themeToggleBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
@@ -55,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
   if (textArray.length) setTimeout(type, newTextDelay);
 });
 
-// --- MENÚ HAMBURGUESA (MÓVIL) ---
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
@@ -74,7 +72,6 @@ links.forEach(link => {
     });
 });
 
-// --- SCROLL SPY (ILUMINAR LETRAS DEL MENÚ AL BAJAR) ---
 const sections = document.querySelectorAll("section, header");
 const navItems = document.querySelectorAll(".nav-links a");
 
@@ -95,7 +92,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// --- ANIMACIÓN AL HACER SCROLL (FADE-IN) ---
 const hiddenElements = document.querySelectorAll('.hidden');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -108,7 +104,6 @@ const observer = new IntersectionObserver((entries) => {
 
 hiddenElements.forEach((el) => observer.observe(el));
 
-// --- SISTEMA DE GALERÍA Y LIGHTBOX ---
 let galleryImages = [];
 let galleryCaptions = [];
 let currentIndex = 0;
