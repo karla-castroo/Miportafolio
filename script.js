@@ -161,3 +161,18 @@ function updateLightboxUI() {
         nextBtn.style.display = 'none';
     }
 }
+const glowElements = document.querySelectorAll('.tech-card, .project-row, .contact-card-glass');
+
+const mobileGlowObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (window.innerWidth <= 768) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('mobile-glow'); 
+            } else {
+                entry.target.classList.remove('mobile-glow'); 
+            }
+        }
+    });
+}, { threshold: 0.5 }); 
+
+glowElements.forEach(el => mobileGlowObserver.observe(el));
