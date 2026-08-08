@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Efectos de luz de fondo sutiles -->
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
 
@@ -37,8 +36,13 @@
                 Soy <span id="typed-text" class="accent-text"></span><span class="cursor">|</span>
             </h2>
             
+            <div class="hero-image-wrapper mobile-only-img">
+                <div class="profile-glow-circle"></div>
+                <img src="foto-karla.png" alt="Karla Castro" class="hero-profile-img" onerror="this.src='https://via.placeholder.com/350x350/1e293b/3b82f6?text=Karla+Castro'">
+            </div>
+            
             <p class="hero-description">
-                Ingeniera en Informática egresada de INACAP. Tengo experiencia en desarrollo web Full Stack y me interesan el desarrollo Back End, la administración de bases de datos, el análisis de datos y la Inteligencia Artificial. Actualmente me encuentro en búsqueda de oportunidades laborales donde pueda aplicar mis conocimientos y seguir creciendo profesionalmente.
+                Ingeniera en Informática egresada de INACAP. Tengo experiencia en desarrollo web Full Stack y me interesan el desarrollo Back End, la administration de bases de datos, el análisis de datos y la Inteligencia Artificial. Actualmente me encuentro en búsqueda de oportunidades laborales donde pueda aplicar mis conocimientos y seguir creciendo profesionalmente.
             </p>
             
             <div class="hero-buttons">
@@ -48,7 +52,7 @@
             </div>
         </div>
 
-        <div class="hero-right hidden">
+        <div class="hero-right hidden desktop-only-img">
             <div class="hero-image-wrapper">
                 <div class="profile-glow-circle"></div>
                 <img src="foto-karla.png" alt="Karla Castro" class="hero-profile-img" onerror="this.src='https://via.placeholder.com/350x350/1e293b/3b82f6?text=Karla+Castro'">
@@ -61,7 +65,6 @@
             <h2>Tecnologías y Herramientas</h2>
             <p>Stack tecnológico utilizado para transformar datos en soluciones robustas.</p>
         </div>
-
         <div class="tech-grid mt-4">
             <div class="tech-card hidden stagger-1">
                 <div class="tech-icon"><i class="fas fa-server"></i></div>
@@ -70,7 +73,6 @@
                     <span class="tag-white">SQL</span><span class="tag-white">Oracle DB</span><span class="tag-white">Python</span><span class="tag-white">NodeJS</span><span class="tag-white">BigQuery</span><span class="tag-white">MariaDB</span>
                 </div>
             </div>
-
             <div class="tech-card hidden stagger-2">
                 <div class="tech-icon"><i class="fas fa-brain"></i></div>
                 <h3>IA & Analytics</h3>
@@ -78,7 +80,6 @@
                     <span class="tag-white">YOLO / IA</span><span class="tag-white">OpenCV</span><span class="tag-white">Looker Studio</span><span class="tag-white">Power BI</span>
                 </div>
             </div>
-
             <div class="tech-card hidden stagger-3">
                 <div class="tech-icon"><i class="fas fa-code"></i></div>
                 <h3>Frontend & Móvil</h3>
@@ -86,7 +87,6 @@
                     <span class="tag-white">HTML5/CSS3</span><span class="tag-white">JavaScript</span><span class="tag-white">ReactJS</span><span class="tag-white">Flutter</span><span class="tag-white">Dart</span>
                 </div>
             </div>
-
             <div class="tech-card hidden stagger-4">
                 <div class="tech-icon"><i class="fas fa-tools"></i></div>
                 <h3>Herramientas & API</h3>
@@ -102,11 +102,10 @@
             <h2>Proyectos Destacados</h2>
             <p>Experiencia profesional y desarrollos tecnológicos recientes.</p>
         </div>
-        
         <div class="projects-list mt-4">
             <div class="project-row hidden">
                 <div class="project-visual">
-                    <img src="dashboard-rojos.png" alt="Dashboard Analítico CIC" class="project-img" onclick="openLightbox('dashboard-rojos.png', 'Dashboard Analítico - CIC')">
+                    <img src="dashboard-rojos.png" alt="Dashboard Analítico" class="project-img" onclick="openLightbox('dashboard-rojos.png', 'Dashboard Analítico - CIC')">
                 </div>
                 <div class="project-info">
                     <h3>Dashboard Analítico</h3>
@@ -132,7 +131,6 @@
                 </div>
             </div>
 
-           
             <div class="project-row hidden">
                 <div class="project-visual">
                     <img src="image_a12d43.jpg" alt="NaviCap" class="project-img navicap-img" onclick="openGallery(['image_a12d43.jpg', 'image_a1317c.png', 'image_a13121.png', 'image_a130e3.png'], ['NaviCap Hardware', 'App Móvil', 'Inicio', 'Alertas SOS'])">
@@ -143,7 +141,7 @@
                     <div class="project-tags">
                         <span class="tag-white">Python</span><span class="tag-white">Yolo</span><span class="tag-white">OpenCV</span><span class="tag-white">Flutter</span><span class="tag-white">Firebase</span>
                     </div>
-                    <a href="#" onclick="openGallery(['image_a12d43.jpg', 'image_a1317c.png', 'image_a13121.png', 'image_a130e3.png']); return false;" class="project-link">Ver Galería Completa <i class="fas fa-images"></i></a>
+                    <a href="#" onclick="openGallery(['image_a12d43.jpg', 'image_a1317c.png', 'image_a13121.png', 'image_a130e3.png'], ['NaviCap Hardware', 'App Móvil', 'Inicio', 'Alertas SOS']); return false;" class="project-link">Ver Galería Completa <i class="fas fa-images"></i></a>
                 </div>
             </div>
 
@@ -168,35 +166,19 @@
             <div class="contact-header">
                 <h2>En búsqueda de nuevos retos en ingeniería y desarrollo</h2>
                 <p>Envíame un mensaje directo y me pondré en contacto contigo lo antes posible.</p>
-                <div class="email-badge">
-                    <i class="fas fa-envelope"></i> karlacastro1263@gmail.com
-                </div>
+                <div class="email-badge"><i class="fas fa-envelope"></i> karlacastro1263@gmail.com</div>
             </div>
             
             <form action="https://formsubmit.co/karlacastro1263@gmail.com" method="POST" class="catchy-form">
                 <input type="hidden" name="_subject" value="¡Nuevo correo desde tu Portafolio!">
                 <input type="hidden" name="_template" value="table">
-                
                 <div class="form-row">
-                    <div class="input-catchy">
-                        <input type="text" name="name" required placeholder="Tu Nombre">
-                    </div>
-                    <div class="input-catchy">
-                        <input type="email" name="email" required placeholder="Tu Correo Electrónico">
-                    </div>
+                    <div class="input-catchy"><input type="text" name="name" required placeholder="Tu Nombre"></div>
+                    <div class="input-catchy"><input type="email" name="email" required placeholder="Tu Correo Electrónico"></div>
                 </div>
-                
-                <div class="input-catchy">
-                    <input type="text" name="subject" required placeholder="Asunto del Mensaje">
-                </div>
-                
-                <div class="input-catchy">
-                    <textarea name="message" rows="5" required placeholder="Escribe todos los detalles aquí..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-white btn-submit">
-                    Enviar Mensaje <i class="fas fa-paper-plane"></i>
-                </button>
+                <div class="input-catchy"><input type="text" name="subject" required placeholder="Asunto del Mensaje"></div>
+                <div class="input-catchy"><textarea name="message" rows="5" required placeholder="Escribe todos los detalles aquí..."></textarea></div>
+                <button type="submit" class="btn btn-white btn-submit">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
     </section>
@@ -207,7 +189,7 @@
         <a class="lightbox-next" id="lightbox-next" onclick="changeGalleryImage(1)">&#10095;</a>
         
         <div class="lightbox-wrapper">
-            <img class="lightbox-content" id="lightbox-img">
+            <img class="lightbox-content" id="lightbox-img" onclick="changeGalleryImage(1)" style="cursor: pointer;">
             <div id="lightbox-caption" class="lightbox-caption-text"></div>
         </div>
     </div>
